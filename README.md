@@ -1,8 +1,11 @@
 # Installation
 
 **Windows**
+
 - `npm i dba-api.js`
+
 **Linux**
+
 - `sudo npm i dba-api.js`
 
 # Usage
