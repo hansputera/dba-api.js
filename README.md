@@ -35,6 +35,7 @@ Name: ${data.bot.tag}
 Owner : ${data.ownerTag}
 Prefix : ${data.prefix}
 Approved : ${data.approve}
+`)
 })
 }
 
