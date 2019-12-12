@@ -1,6 +1,9 @@
 const fetch = require("node-fetch")
 const config = require("../config.json")
+
+
 module.exports = class DiscordBotsAlchemist {
+  
   constructor(id, token){
     if (!id) throw new Error("[dba-api.js] ID Must be provided ( your id bot )")
     if (!token) throw new Error("[dba-api.js] Token must be provided")
