@@ -1,9 +1,9 @@
 # Installation
 
 **Windows**
-- `npm i dba-api.js**
+- `npm i dba-api.js`
 **Linux**
-- `sudo npm i dba-api.js**
+- `sudo npm i dba-api.js`
 
 # Usage
 
@@ -39,3 +39,7 @@ Approved : ${data.approve}
 }
 
 })
+
+bot.login("Your bot token Discord")
+
+```
