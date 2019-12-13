@@ -18,7 +18,7 @@ module.exports = class DiscordBotsAlchemist {
     if (id.length > 18) throw new Error("[dba-api.js] ID length must be 17")
     
     if (token.length <= 22) throw new Error("[dba-api.js] Your length token must be 22")
-    if (token.length > 23) throw new Error("[dba-api.js] Your length token must be 22")
+    if (token.length > 22) throw new Error("[dba-api.js] Your length token must be 22")
     
     this.version = require("../package.json").version;
     this.baseURL = "https://alchemistdev.glitch.me"
