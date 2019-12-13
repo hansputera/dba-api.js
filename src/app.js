@@ -14,10 +14,10 @@ module.exports = class DiscordBotsAlchemist {
     
     
     if (isNaN(id)) throw new Error("[dba-api.js] ID not allowed for alphabet.")
-    if (id.length <= 17) throw new Error("[dba-api.js] ID length must be 17")
-    if (id.length > 18) throw new Error("[dba-api.js] ID length must be 17")
+    if (id.length <= 17) throw new Error("[dba-api.js] ID length must be 18")
+    if (id.length > 18) throw new Error("[dba-api.js] ID length must be 18")
     
-    if (token.length <= 22) throw new Error("[dba-api.js] Your length token must be 22")
+    if (token.length <= 21) throw new Error("[dba-api.js] Your length token must be 22")
     if (token.length > 22) throw new Error("[dba-api.js] Your length token must be 22")
     
     this.version = require("../package.json").version;
