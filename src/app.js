@@ -37,7 +37,7 @@ module.exports = class DiscordBotsAlchemist {
       
     })
 
-    this.getBot = async (id) => {
+    this.getBot = async function(id) {
       if (!id) throw Error("[dba-api.js] Empety ID")
       if (isNaN(id)) throw Error("[dba-api.js] Invalid ID")
       if (id.length <= 17 || id.length > 18) throw Error("[dba-api.js] Invalid Id")
@@ -54,8 +54,8 @@ module.exports = class DiscordBotsAlchemist {
       if (!data) data.error = 404;
       
       
-      let bb = this.fetchUser(id)
-      let aa = this.fetchUser(data.ownerID)
+      let bb = await this.fetchUser(id)
+      let aa = await this.fetchUser(data.ownerID)
       
       const body = {
         botName: bb.tag,
@@ -76,7 +76,7 @@ module.exports = class DiscordBotsAlchemist {
       return body;
     }
 
-this.fetchUser = async (id) => {
+this.fetchUser = async function(id) {
   
   if (!id) throw Error("[dba-api.js] Empety ID")
   if (isNaN(id)) throw Error("[dba-api.js] Invalid Id")
