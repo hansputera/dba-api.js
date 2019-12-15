@@ -33,7 +33,7 @@ module.exports = class DiscordBotsAlchemist {
       if (!data[id]) throw Error("[dba-api.js] Your ID Bot isn't registered on database")
       if (data[id].token !== token) throw Error("[dba-api.js] Your token is wrong !")
       
-      console.log(`You logged as : ${data[id].name} with bot ${data[id].bot}`)
+      console.log(`You logged as : ${this.fetchUser(id).username} with token : (hidden)`)
       
     })
 
