@@ -21,7 +21,7 @@ module.exports = class DiscordBotsAlchemist {
     if (token.length > 22) throw new Error("[dba-api.js] Your length token must be 22")
     
     this.version = require("../package.json").version;
-    this.baseURL = "https://alchemistdev.glitch.me"
+    this.baseURL = "https://dba-dev.glitch.me"
     this.baseAPIURL = this.baseURL + "/api"
     
     
