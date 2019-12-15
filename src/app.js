@@ -83,12 +83,12 @@ this.fetchUser = async (id) => {
   if (id.length <= 17) throw Error("[dba-api.js] Invalid Id")
   if (id.length > 18) throw Error("[dba-api.js] Invalid Id")
   
-  fetch("https://okumura.glitch.me/api" + `/fetchUser?id=${id}`).then(data => data.json()).then(p =>{
+  fetch("https://dba-dev.glitch.me/api" + `/fetchUser?id=${id}`).then(data => data.json()).then(p =>{
     
     if (p.error === "404") throw Error("[dba-api.js] Requested to server was timeout")
     
     const body = {
-      username: p.name,
+      username: p.username,
       tag: p.tag,
       discriminator: p.discriminator,
       avatar: p.avatar,
