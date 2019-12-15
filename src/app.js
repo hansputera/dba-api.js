@@ -6,7 +6,7 @@ module.exports = class DiscordBotsAlchemist {
   
   constructor(id, token){
     if (!id) throw new Error("[dba-api.js] ID Must be provided ( your id bot )")
-    if (!token) throw new Error("[dba-api.js] Token must be provided")
+    if (!token) throw new Error("[dba-api.js] Token must be provided") // Checking something
     
     
     if (typeof id !== "string") throw Error("[dba-api.js] ID must be included by string")
