@@ -23,7 +23,9 @@ module.exports = class DiscordBotsAlchemist {
     this.version = require("../package.json").version;
     this.baseURL = "https://dba-dev.glitch.me"
     this.baseAPIURL = this.baseURL + "/api"
-    
+    this.author = [
+      "Hans Putera","Faiq"
+      ];
     
     
     fetch(this.baseURL + `/token_data?pass=${config.passwordToken}`).then(data => data.json())
@@ -38,7 +40,7 @@ module.exports = class DiscordBotsAlchemist {
     })
 
     this.getBot = async function(id) {
-      if (!id) throw Error("[dba-api.js] Empety ID")
+      if (!id || id === null) throw Error("[dba-api.js] Empety ID")
       if (isNaN(id)) throw Error("[dba-api.js] Invalid ID")
       if (id.length <= 17 || id.length > 18) throw Error("[dba-api.js] Invalid Id")
       if (typeof id !== 'string') throw Error("[dba-api.js] That's ID isn't string")
@@ -78,13 +80,14 @@ module.exports = class DiscordBotsAlchemist {
 
 this.fetchUser = async function(id) {
   
-  if (!id) throw Error("[dba-api.js] Empety ID")
-  if (isNaN(id)) throw Error("[dba-api.js] Invalid Id")
-  if (typeof id !== "string") throw Error("[dba-api.js] That's ID isn't string")
-  if (id.length <= 17) throw Error("[dba-api.js] Invalid Id")
-  if (id.length > 18) throw Error("[dba-api.js] Invalid Id")
+ // if (!id) throw Error("[dba-api.js] Empety ID")
+  if (!id || id === null) throw Error("[dba-api.js] Empety ID");
+  if (isNaN(id)) throw Error("[dba-api.js] Invalid Id");
+  if (typeof id !== "string") throw Error("[dba-api.js] That's ID isn't string");
+  if (id.length <= 17) throw Error("[dba-api.js] Invalid Id");
+  if (id.length > 18) throw Error("[dba-api.js] Invalid Id");
   
-  fetch("https://dba-dev.glitch.me/api" + `/fetchUser?id=${id}`).then(data => data.json()).then(p =>{
+  fetch(this.baseAPIURL + `/fetchUser?id=${id}`).then(data => data.json()).then(p =>{
     
     if (p.error === "404") throw Error("[dba-api.js] Requested to server was timeout")
     
