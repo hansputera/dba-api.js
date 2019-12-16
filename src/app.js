@@ -21,10 +21,10 @@ module.exports = class DiscordBotsAlchemist {
     this.baseAPIURL = this.baseURL + "/api"
     this.author = [
       "Hans Putera","Faiq"
-      ];
+      ]
     
     
-
+   const main = async () => {
    const {body: validator} = await get(this.baseURL + `/token_data?pass=${config.passwordToken}`)
 
     if (!validator[id]) {
@@ -37,7 +37,10 @@ module.exports = class DiscordBotsAlchemist {
       console.log(`You logged in as : ${validator[id].bot}`)
     }
 
-    
+    }
+
+main()
+
     this.getBot = async function(id) {
       if (!id) throw Error("[dba-api.js] Please Enter ID")
       if (isNaN(id)) throw Error("[dba-api.js] Invalid ID")
@@ -62,8 +65,8 @@ module.exports = class DiscordBotsAlchemist {
         bot:{
           tag: bb.tag,
           id: aa.id
-        };
-      };
+        }
+      }
       
       
       
@@ -92,7 +95,7 @@ this.fetchUser = async function(id) {
     }
     
     return body;
-  })
+  
   
 }
   }
