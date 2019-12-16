@@ -13,7 +13,8 @@
     "node-fetch": "^2.6.0"
   },
   "engines": {
-    "node": "10.x"
+    "node": "12.13.1.x",
+    "npm":"6.13.1x"
   },
   "license": "MIT",
   "keywords": [
