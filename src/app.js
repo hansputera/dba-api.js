@@ -40,7 +40,7 @@ module.exports = class DiscordBotsAlchemist {
     })
 
     this.getBot = async function(id) {
-      if (!id || id === null) throw Error("[dba-api.js] Empety ID")
+      if (!id) throw Error("[dba-api.js] Empety ID")
       if (isNaN(id)) throw Error("[dba-api.js] Invalid ID")
       if (id.length <= 17 || id.length > 18) throw Error("[dba-api.js] Invalid Id")
       if (typeof id !== 'string') throw Error("[dba-api.js] That's ID isn't string")
@@ -81,7 +81,7 @@ module.exports = class DiscordBotsAlchemist {
 this.fetchUser = async function(id) {
   
  // if (!id) throw Error("[dba-api.js] Empety ID")
-  if (!id || id === null) throw Error("[dba-api.js] Empety ID");
+  if (!id) throw Error("[dba-api.js] Empety ID");
   if (isNaN(id)) throw Error("[dba-api.js] Invalid Id");
   if (typeof id !== "string") throw Error("[dba-api.js] That's ID isn't string");
   if (id.length <= 17) throw Error("[dba-api.js] Invalid Id");
