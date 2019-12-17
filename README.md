@@ -34,7 +34,7 @@ if (!id) return message.reply("Provided some id bot")
 
 dba.getBot(id).then(data => {
 message.channel.send(`
-Name: ${data.bot.tag}
+Name: ${data.botName}
 Owner : ${data.ownerTag}
 Prefix : ${data.prefix}
 Approved : ${data.approve}
